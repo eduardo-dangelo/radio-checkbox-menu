@@ -1,0 +1,27 @@
+{
+  "name": "radio-checkbox-menu",
+  "description": "-add react-router\n-try to add scss\n-look for styles references\n-add discription on the code\n-send to code-sandbox\n",
+  "version": "0.0.112",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "3.3.7",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "15.5.3",
+    "react-bootstrap": "0.31.1",
+    "react-dom": "15.5.3",
+    "react-icons": "2.2.5"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
