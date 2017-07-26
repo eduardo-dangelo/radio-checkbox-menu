@@ -7,7 +7,7 @@ class Sidebar extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      showInput: true
+      showInput: false
     }
     this.toggleInput = this.toggleInput.bind(this);
   }

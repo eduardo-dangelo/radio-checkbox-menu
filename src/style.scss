@@ -9,8 +9,8 @@
 	$color-shadow-active: #095875;
 	$color-light: #555555;
 	$color-light-active: #22b1e5;
-	$text-gloss: 0 0 6px #dddddd;
-	$padding-menu: 15px 25px;
+	$text-gloss: 0 0 6px rgba(255,255,255,0.2);
+	$padding-menu: 15px 30px;
 	$padding-submenu: 15px 50px;
 
 
@@ -41,12 +41,17 @@
 		margin-top: 0;
 		height: 100%;
 		position: relative;
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 	}
 
 	.show {
 		input {
 			position: absolute;
 			margin-top: 16px;
+			margin-left: 10px;
 		}
 	}
 
@@ -107,7 +112,7 @@
 			cursor: pointer;
 			color: #ffffff;
 			font-size: 13px;
-			text-shadow: 0 0 8px #dddddd;
+			text-shadow: $text-gloss;
 			transition: .3s ease;
 			border-top: 1px solid $color-light;
 			border-right: 1px solid $color-light;

@@ -24,10 +24,14 @@ body {
   margin-top: 0;
   height: 100%;
   position: relative; }
+  @media (max-width: 500px) {
+    .sidebar {
+      width: 100%; } }
 
 .show input {
   position: absolute;
-  margin-top: 16px; }
+  margin-top: 16px;
+  margin-left: 10px; }
 
 .hide input {
   position: absolute;
@@ -38,11 +42,11 @@ body {
 	MENU
 	=============== */
 .menu-item {
-  padding: 15px 25px;
+  padding: 15px 30px;
   cursor: pointer;
   color: #ffffff;
   font-size: 13px;
-  text-shadow: 0 0 6px #dddddd;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
   transition: .3s ease;
   border-top: 1px solid #555555;
   border-right: 1px solid #555555;
@@ -75,7 +79,7 @@ body {
     cursor: pointer;
     color: #ffffff;
     font-size: 13px;
-    text-shadow: 0 0 8px #dddddd;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
     transition: .3s ease;
     border-top: 1px solid #555555;
     border-right: 1px solid #555555;
@@ -153,7 +157,7 @@ input[type=radio]:checked + .sub-menu-item {
 .btn-toggle-input {
   cursor: pointer;
   color: #bbbbbb;
-  padding: 15px 25px;
+  padding: 15px 30px;
   transition: .8s ease; }
   .btn-toggle-input:hover {
     color: white; }

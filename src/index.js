@@ -7,7 +7,6 @@ const App = () => (
   <div className="app">
     <Sidebar />
     <div className="internal-page">
-      test
     </div>
   </div>
 );
