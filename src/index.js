@@ -6,8 +6,6 @@ import Sidebar from './Sidebar';
 const App = () => (
   <div className="app">
     <Sidebar />
-    <div className="internal-page">
-    </div>
   </div>
 );
 
