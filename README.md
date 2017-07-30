@@ -16,6 +16,8 @@ In this example we are going to use the psedo-classes of the inputs :checked and
 
 ## JS
 
+### Sidabar
+
 First we import Radio from react-bootstrap and than we wrapp into a div with className="sidebar",
 ```
 import React from 'react';
@@ -33,6 +35,8 @@ class Sidebar extends React.Component{
 export default Sidebar;
 
 ```
+
+### Menu-item
 Inside our Radio we create a div ang give the className="menu-item" 
 ```
   <div className="sidebar">
