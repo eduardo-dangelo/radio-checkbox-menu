@@ -79,6 +79,12 @@ Inside our Radio we create a div ang give the className="menu-item"
 </div>
 
 ```
+## Toggle inputs button
+
+```
+
+```
+
 
 ## SCSS
 
