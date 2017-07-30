@@ -1,9 +1,9 @@
 /* ===============
-	VARIABLES
-	=============== */
+VARIABLES
+=============== */
 /* ===============
-	MAIN-PAGE
-	=============== */
+MAIN-PAGE
+=============== */
 body {
   padding: 0;
   margin: 0;
@@ -16,8 +16,8 @@ body {
   display: block; }
 
 /* ===============
-	SIDE-BAR
-	=============== */
+SIDE-BAR
+=============== */
 .sidebar {
   background: #444444;
   width: 300px;
@@ -39,8 +39,8 @@ body {
   display: none; }
 
 /* ===============
-	MENU
-	=============== */
+MENU
+=============== */
 .menu-item {
   padding: 15px 30px;
   cursor: pointer;
@@ -68,8 +68,8 @@ body {
       opacity: 0; }
 
 /* ===============
-		DROPDOWN-MENU
-		=============== */
+	DROPDOWN-MENU
+	=============== */
 .sub-menu {
   display: none;
   animation: slideIn .4s ease;
@@ -102,8 +102,8 @@ body {
         opacity: 0; }
 
 /* ===============
-	HOVER EFECT ANIMATION
-	=============== */
+HOVER EFECT ANIMATION
+=============== */
 @keyframes efect {
   from {
     width: 0;
@@ -113,8 +113,8 @@ body {
     opacity: 0; } }
 
 /* ===============
-	SUB-MENU ANIMATION 
-	=============== */
+SUB-MENU ANIMATION 
+=============== */
 @keyframes slideIn {
   from {
     margin-top: -20px; }
@@ -122,15 +122,15 @@ body {
     margin-top: 0; } }
 
 /* ===============
-	CHEVRON ARROW ICON
-	=============== */
+CHEVRON ARROW ICON
+=============== */
 svg {
   float: right;
   transition: .2s ease; }
 
 /* ===============
-	TOGGLE DROPDOWN AND ROTATE ARRROW
-	=============== */
+TOGGLE DROPDOWN AND ROTATE ARRROW
+=============== */
 input[type=checkbox]:checked + .menu .sub-menu {
   display: block; }
 
@@ -138,8 +138,8 @@ input[type=checkbox]:checked + .menu .menu-item svg {
   transform: rotate(90deg); }
 
 /* ===============
-	CHANGE BACKGROUND WHEN ITEM IS SELECTED
-	=============== */
+CHANGE BACKGROUND WHEN ITEM IS SELECTED
+=============== */
 input[type=radio]:checked + .menu-item {
   background: #0f90bf;
   border-top: 1px solid #22b1e5;
