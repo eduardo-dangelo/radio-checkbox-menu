@@ -49,18 +49,18 @@ SIDE-BAR
 
 .show {
 	input {
-		position: absolute;
-		margin-top: 16px;
-		margin-left: 10px;
+	position: absolute;
+	margin-top: 16px;
+	margin-left: 10px;
 	}
 }
 
 .hide {
 	input {
-		position: absolute;
-		margin-top: 16px;
-		display: none
-	}
+	position: absolute;
+	margin-top: 16px;
+	display: none
+}
 }
 
 /* ===============
@@ -95,12 +95,12 @@ MENU
 			animation: efect .8s ease;
 			opacity: 0;
 		}
-	}
+	}	
 }
 
 /* ===============
-	DROPDOWN-MENU
-	=============== */
+DROPDOWN-MENU
+=============== */
 
 .sub-menu {
 	display: none;
@@ -124,7 +124,7 @@ MENU
 
 		&:hover {
 			background: $background-hover;
-	
+
 			&:after {
 				background: #999999;
 				content: '';

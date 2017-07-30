@@ -68,8 +68,8 @@ MENU
       opacity: 0; }
 
 /* ===============
-	DROPDOWN-MENU
-	=============== */
+DROPDOWN-MENU
+=============== */
 .sub-menu {
   display: none;
   animation: slideIn .4s ease;
