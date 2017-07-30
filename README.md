@@ -1,92 +1,130 @@
 
-## Radio And Checkbox Menu - React
+## Radio And Checkbox Sidebar Menu - React App
 
 ### A sidebar usign radio-inputs as menu-itens and checkbox dropdown.
 
-- [How it works?](#how-it-works)
-- [Radio as menu-item](#radio-as-menu-item)
-- [Checkbox dropdown](#checkbox-dropdown)
-- [Menu-item style](#menu-item-style)
-
 you can see this project working on [github-pages](https://eduardo-dangelo.github.io/radio-checkbox-menu) or edit this code on [CodeSandbox]().
 
-## How it works?
 
-In this example we are going to use the psedo-classes of the inputs :checked and :hover to trigger all the functions of the menu.
+## Sidabar.js
 
-## JS
-
-### Sidabar
-
-First we import Radio from react-bootstrap and than we wrapp into a div with className="sidebar",
 ```
 import React from 'react';
-import { Radio } from 'react-bootstrap';
+import './style.css';
+import { Radio, Checkbox } from 'react-bootstrap';
+import FaChevronRight from 'react-icons/lib/fa/chevron-right';
 
-class Sidebar extends React.Component{
+class Sidebar extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      showInput: false
+    }
+    this.toggleInput = this.toggleInput.bind(this);
+  }
+
+  toggleInput() {
+    this.setState(prevState => ({
+      showInput: !prevState.showInput
+    }))
+  }
+
   render() {
+    const { showInput } = this.state;
+    const input = showInput ? 'show' : 'hide'
+
     return (
       <div className="sidebar">
-        <Radio name='item' className={input} />
+
+        {/* menu-item*/}
+
+        <Radio name='item' className={input}>
+          <div className="menu-item">
+            Menu item 1
+          </div>
+        </Radio>
+
+        <Radio name='item' className={input}>
+          <div className="menu-item">
+            Menu item 2
+          </div>
+        </Radio>
+
+        {/* dropdown 1 */}
+
+        <Checkbox className={input}>
+          <div className="menu">
+
+            <div className="menu-item">
+              Dropdown 1 <FaChevronRight />
+            </div>
+
+            <div className="sub-menu">
+              <Radio name='item' className={input}>
+                <div className="sub-menu-item">
+                  Menu item 3
+                </div>
+              </Radio>
+              <Radio name='item' className={input}>
+                <div className="sub-menu-item">
+                  Menu item 4
+                </div>
+              </Radio>
+              <Radio name='item' className={input}>
+                <div className="sub-menu-item">
+                  Menu item 5
+                </div>
+              </Radio>
+              <Radio name='item' className={input}>
+                <div className="sub-menu-item">
+                  Menu item 6
+                </div>
+              </Radio>
+            </div>
+          </div>
+        </Checkbox>
+
+        {/* dropdown 2 */}
+        
+        <Checkbox className={input}>
+          <div className="menu">
+
+            <div className="menu-item">
+              Dropdown 2 <FaChevronRight />
+            </div>
+            
+            <div className="sub-menu">
+              <Radio name='item' className={input}>
+                <div className="sub-menu-item">
+                  Menu item 7
+                </div>
+              </Radio>
+              <Radio name='item' className={input}>
+                <div className="sub-menu-item">
+                  Menu item 8
+                </div>
+              </Radio>
+            </div>
+          </div>
+        </Checkbox>
+
+        {/* toggle-input-btn */}
+
+        <div className="btn-toggle-input" onClick={this.toggleInput}>
+          click here to {!showInput ? 'show' : 'hide'} inputs
+        </div>
       </div>
     )
   }
+}
 
 export default Sidebar;
 
 ```
 
-### Menu-item
-Inside our Radio we create a div ang give the className="menu-item" 
-```
-  <div className="sidebar">
 
-    <Radio name='item' className={input}>
-      <div className="menu-item">
-        Menu item 1
-      </div>
-    </Radio>
-
-  </div>
-
-```
-### Dropdown
-
-Inside our Radio we create a div ang give the className="menu-item" 
-```
-<div className="sidebar">
-
-  <Checkbox className={input}>
-    <div className="menu">
-      <div className="menu-item">
-        Dropdown 2 <FaChevronRight />
-      </div>
-      <div className="sub-menu">
-        <Radio name='item' className={input}>
-          <div className="sub-menu-item">
-            Menu item 7
-          </div>
-        </Radio>
-        <Radio name='item' className={input}>
-          <div className="sub-menu-item">
-            Menu item 8
-          </div>
-        </Radio>
-      </div>
-    </div>
-  </Checkbox>
-
-</div>
-
-```
-## Toggle inputs button
-
-```
-
-```
-
-
-## SCSS
+## style.scss
 
 ```
 
